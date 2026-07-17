@@ -1,1 +1,1 @@
-# AI-document-search
+searches through documents and analyzes the data 
