@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/AiDocumentSearch.Api/AiDocumentSearch.Api.csproj" />
+    <Project Path="src/AiDocumentSearch.Application/AiDocumentSearch.Application.csproj" />
+    <Project Path="src/AiDocumentSearch.Domain/AiDocumentSearch.Domain.csproj" />
+    <Project Path="src/AiDocumentSearch.Infrastructure/AiDocumentSearch.Infrastructure.csproj" />
+  </Folder>
+</Solution>
