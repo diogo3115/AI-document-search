@@ -1,6 +1,0 @@
-@AiDocumentSearch.Domain_HostAddress = http://localhost:5185
-
-GET {{AiDocumentSearch.Domain_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

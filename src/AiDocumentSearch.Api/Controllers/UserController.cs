@@ -1,5 +1,6 @@
 using System.Reflection.Metadata.Ecma335;
 using Microsoft.AspNetCore.Mvc;
+using AiDocumentSearch.Application.DTOs;
 
 namespace AiDocumentSearch.Api.Controllers;
 
@@ -17,7 +18,7 @@ public class UserController : ControllerBase
         });
     }
 
-    [HttpGet("all")]
+    [HttpGet]
     public IActionResult GetUsers()
     {
         return Ok(new[]
@@ -25,5 +26,24 @@ public class UserController : ControllerBase
             new{Id = 1, Name = "Luke"},
             new{Id = 2, Name = "John"}
         });
+    }
+
+    [HttpPut("{id}")]
+    public IActionResult UpdateUser(int id, UpdateUserRequest request)
+    {
+        var user = new
+        {
+            Id = id,
+            Name = request.Name,
+            Email = request.Email
+        };
+
+        return Ok(user);
+    }
+
+    [HttpDelete("{id}")]
+    public IActionResult DeleteUser(int id)
+    {
+        return NoContent();
     }
 }
