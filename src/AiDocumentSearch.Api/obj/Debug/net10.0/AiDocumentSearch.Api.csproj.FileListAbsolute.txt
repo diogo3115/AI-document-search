@@ -12,7 +12,11 @@ D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearc
 D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Api\bin\Debug\net10.0\AiDocumentSearch.Application.dll
+D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Api\bin\Debug\net10.0\AiDocumentSearch.Domain.dll
+D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Api\bin\Debug\net10.0\AiDocumentSearch.Infrastructure.dll
 D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Api\bin\Debug\net10.0\AiDocumentSearch.Application.pdb
+D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Api\bin\Debug\net10.0\AiDocumentSearch.Infrastructure.pdb
+D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Api\bin\Debug\net10.0\AiDocumentSearch.Domain.pdb
 D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Api\obj\Debug\net10.0\AiDocumentSearch.Api.csproj.AssemblyReference.cache
 D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Api\obj\Debug\net10.0\rpswa.dswa.cache.json
 D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Api\obj\Debug\net10.0\AiDocumentSearch.Api.GeneratedMSBuildEditorConfig.editorconfig
@@ -37,3 +41,8 @@ D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearc
 D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Api\obj\Debug\net10.0\AiDocumentSearch.Api.pdb
 D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Api\obj\Debug\net10.0\AiDocumentSearch.Api.genruntimeconfig.cache
 D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Api\obj\Debug\net10.0\ref\AiDocumentSearch.Api.dll
+D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Api\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.dll
+D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Api\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Api\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Api\bin\Debug\net10.0\Npgsql.dll
+D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Api\bin\Debug\net10.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll

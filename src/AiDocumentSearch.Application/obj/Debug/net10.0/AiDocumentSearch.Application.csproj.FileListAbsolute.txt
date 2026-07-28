@@ -1,12 +1,15 @@
 D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Application\bin\Debug\net10.0\AiDocumentSearch.Application.deps.json
 D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Application\bin\Debug\net10.0\AiDocumentSearch.Application.dll
 D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Application\bin\Debug\net10.0\AiDocumentSearch.Application.pdb
+D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Application\bin\Debug\net10.0\AiDocumentSearch.Domain.dll
+D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Application\bin\Debug\net10.0\AiDocumentSearch.Domain.pdb
 D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Application\obj\Debug\net10.0\AiDocumentSearch.Application.csproj.AssemblyReference.cache
 D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Application\obj\Debug\net10.0\AiDocumentSearch.Application.GeneratedMSBuildEditorConfig.editorconfig
 D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Application\obj\Debug\net10.0\AiDocumentSearch.Application.AssemblyInfoInputs.cache
 D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Application\obj\Debug\net10.0\AiDocumentSearch.Application.AssemblyInfo.cs
 D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Application\obj\Debug\net10.0\AiDocumentSearch.Application.csproj.CoreCompileInputs.cache
 D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Application\obj\Debug\net10.0\AiDocumentSearch.Application.sourcelink.json
+D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Application\obj\Debug\net10.0\AiDocume.4897CE12.Up2Date
 D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Application\obj\Debug\net10.0\AiDocumentSearch.Application.dll
 D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Application\obj\Debug\net10.0\refint\AiDocumentSearch.Application.dll
 D:\work\AI Document Search Platform (RAG)\AI-document-search\src\AiDocumentSearch.Application\obj\Debug\net10.0\AiDocumentSearch.Application.pdb

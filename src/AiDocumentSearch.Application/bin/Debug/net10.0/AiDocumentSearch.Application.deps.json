@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v10.0": {
       "AiDocumentSearch.Application/1.0.0": {
         "dependencies": {
+          "AiDocumentSearch.Domain": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "10.0.10"
         },
         "runtime": {
@@ -32,6 +33,17 @@
             "fileVersion": "2.0.0.0"
           }
         }
+      },
+      "AiDocumentSearch.Domain/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.OpenApi": "10.0.10"
+        },
+        "runtime": {
+          "AiDocumentSearch.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -54,6 +66,11 @@
       "sha512": "sha512-GGYLfzV/G/ct80OZ45JxnWP7NvMX1BCugn/lX7TH5o0lcVaviavsLMTxmFV2AybXWjbi3h6FF1vgZiTK6PXndw==",
       "path": "microsoft.openapi/2.0.0",
       "hashPath": "microsoft.openapi.2.0.0.nupkg.sha512"
+    },
+    "AiDocumentSearch.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
