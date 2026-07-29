@@ -1,6 +1,8 @@
 using System.Reflection.Metadata.Ecma335;
 using Microsoft.AspNetCore.Mvc;
 using AiDocumentSearch.Application.DTOs;
+using AiDocumentSearch.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 namespace AiDocumentSearch.Api.Controllers;
 
@@ -8,6 +10,13 @@ namespace AiDocumentSearch.Api.Controllers;
 [Route("api/[controller]")]
 public class UserController : ControllerBase
 {
+    public readonly ApplicationDbContext _context;
+
+    public UserController(ApplicationDbContext context)
+    {
+        _context = context;
+    }
+
     [HttpGet("{id}")]
     public IActionResult GetUser(int id)
     {
@@ -19,13 +28,11 @@ public class UserController : ControllerBase
     }
 
     [HttpGet]
-    public IActionResult GetUsers()
+    public async Task<IActionResult> GetUsers()
     {
-        return Ok(new[]
-        {
-            new{Id = 1, Name = "Luke"},
-            new{Id = 2, Name = "John"}
-        });
+        var users = await _context.Users.ToListAsync();
+
+        return Ok(users);
     }
 
     [HttpPut("{id}")]
