@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AiDocumentSearch.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41752dcffa15dff91c4c9a92e528bd17922260d4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+05a99de9b36963e2ae655e4b4bbcc1c43ab6a7c3")]
 [assembly: System.Reflection.AssemblyProductAttribute("AiDocumentSearch.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AiDocumentSearch.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
