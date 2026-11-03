@@ -7,6 +7,10 @@ using AiDocumentSearch.Infrastructure.Persistence;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using LoginRequest = AiDocumentSearch.Application.DTOs.LoginRequest;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+using Microsoft.IdentityModel.Tokens;
 
 namespace AiDocumentSearch.Api.Controllers;
 [ApiController]
@@ -14,10 +18,12 @@ namespace AiDocumentSearch.Api.Controllers;
 public class AuthController : ControllerBase
 {
     private readonly ApplicationDbContext _context;
+    private readonly IConfiguration _configuration;
 
-    public AuthController(ApplicationDbContext context)
+    public AuthController(ApplicationDbContext context, IConfiguration configuration)
     {
         _context = context;
+        _configuration = configuration;
     }
 
     [HttpPost("register")]
@@ -71,10 +77,42 @@ public class AuthController : ControllerBase
             return Unauthorized("Invalid Email or Password");
         }
 
+        var token = GenerateJwtToken(user);
+
         return Ok(new
         {
             Message = "Login succesful",
-            userId = user.Id
+            userId = user.Id,
+            Token = token
         });
+    }
+
+    public string GenerateJwtToken(User user)
+    {
+        var key = _configuration["Jwt:Key"]
+            ?? throw new InvalidOperationException("JWT is missing.");
+
+        var securityKey = new SymmetricSecurityKey(
+            Encoding.UTF8.GetBytes(key)
+        );
+        var credentials = new SigningCredentials(
+            securityKey, 
+            SecurityAlgorithms.HmacSha256
+        );
+        var claims = new[]
+        {
+            new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+            new Claim(ClaimTypes.Email, user.Email)
+        };
+
+        var token = new JwtSecurityToken(
+            issuer: _configuration["Jwt:Issuer"],
+            audience: _configuration["Jwt:Audience"],
+            claims:claims,
+            expires:DateTime.UtcNow.AddMinutes(60),
+            signingCredentials:credentials
+        );
+
+        return new JwtSecurityTokenHandler().WriteToken(token);
     }
 }

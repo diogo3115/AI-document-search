@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("04f99aba-f483-48c8-87da-b6fdba0fa6ae")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("AiDocumentSearch.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+05a99de9b36963e2ae655e4b4bbcc1c43ab6a7c3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+abce2a206bc6dfa8f7c779162839e548da8670b3")]
 [assembly: System.Reflection.AssemblyProductAttribute("AiDocumentSearch.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AiDocumentSearch.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
