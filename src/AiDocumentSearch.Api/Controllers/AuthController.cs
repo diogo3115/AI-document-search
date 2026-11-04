@@ -87,7 +87,7 @@ public class AuthController : ControllerBase
         });
     }
 
-    public string GenerateJwtToken(User user)
+    private string GenerateJwtToken(User user)
     {
         var key = _configuration["Jwt:Key"]
             ?? throw new InvalidOperationException("JWT is missing.");

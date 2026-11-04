@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using AiDocumentSearch.Application.DTOs;
 using AiDocumentSearch.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace AiDocumentSearch.Api.Controllers;
 
@@ -52,5 +54,21 @@ public class UserController : ControllerBase
     public IActionResult DeleteUser(int id)
     {
         return NoContent();
+    }
+    
+    [Authorize]
+    [HttpGet("profile")]
+    public IActionResult GetProfile()
+    {
+        var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+        var email = User.FindFirst(ClaimTypes.Email)?.Value;
+
+        return Ok(new
+        {
+            Message = "You are authenticated!",
+            UserId = userId,
+            Email = email
+        });
     }
 }

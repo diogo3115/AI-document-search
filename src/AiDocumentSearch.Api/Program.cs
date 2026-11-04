@@ -3,22 +3,42 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using Microsoft.Extensions.Options;
-using Microsoft.IdentityModel.Tokens.Experimental;
-using System.ComponentModel;
+using Microsoft.OpenApi;
+
 
 var builder = WebApplication.CreateBuilder(args);
+Console.WriteLine($"Environment: {builder.Environment.EnvironmentName}");
+Console.WriteLine(
+    $"JWT key loaded: {!string.IsNullOrEmpty(builder.Configuration["Jwt:Key"])}"
+);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(Options =>
+{
+    Options.AddSecurityDefinition("Bearer",new OpenApiSecurityScheme
+    {
+       Name = "Authorisation",
+       Type = SecuritySchemeType.Http,
+       Scheme = "bearer",
+       BearerFormat = "JWT",
+       In = ParameterLocation.Header,
+       Description = "Enter your JWT token here" 
+    });
+
+    Options.AddSecurityRequirement(Document => 
+        new OpenApiSecurityRequirement
+        {
+            [new OpenApiSecuritySchemeReference("Bearer", Document)] = []
+        });
+});
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(
         builder.Configuration.GetConnectionString("DefaultConnection")
     ));
 
-var jwtKey = builder.Configuration["JwtKey"]
+var jwtKey = builder.Configuration["Jwt:Key"]
     ?? throw new InvalidOperationException("JWT key is missing.");
 var jwtIssuer = builder.Configuration["Jwt:Issuer"]
     ?? throw new InvalidOperationException("JWT issuer is missing.");
@@ -57,7 +77,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseAuthentication();
+app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
