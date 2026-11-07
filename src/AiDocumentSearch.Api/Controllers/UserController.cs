@@ -5,11 +5,11 @@ using AiDocumentSearch.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
-
 namespace AiDocumentSearch.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[Authorize]
 public class UserController : ControllerBase
 {
     public readonly ApplicationDbContext _context;
@@ -19,56 +19,77 @@ public class UserController : ControllerBase
         _context = context;
     }
 
-    [HttpGet("{id}")]
-    public IActionResult GetUser(int id)
+    [HttpGet("profile")]
+    public async Task<IActionResult> GetProfile()
     {
+        var userId = Guid.Parse(
+            User.FindFirst(ClaimTypes.NameIdentifier)!.Value
+        );
+
+        var user = await _context.Users.FindAsync(userId);
+
+        if (user == null)
+        {
+            return NotFound("User not found.");
+        }
+
         return Ok(new{
-            Id = id,
-            Name = "John Smith",
-            Email = "JohnSmith@email.com"
+            user.Id,
+            user.Email,
+            user.CreatedAt
         });
     }
 
-    [HttpGet]
-    public async Task<IActionResult> GetUsers()
+    [HttpPut("profile")]
+    public async Task<IActionResult> UpdateProfile(UpdateUserRequest request)
     {
-        var users = await _context.Users.ToListAsync();
+        var email = request.Email.Trim().ToLower();
 
-        return Ok(users);
-    }
+        var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value
+        );
 
-    [HttpPut("{id}")]
-    public IActionResult UpdateUser(int id, UpdateUserRequest request)
-    {
-        var user = new
+        var user = await _context.Users.FindAsync(userId);
+
+        if (user == null)
         {
-            Id = id,
-            Name = request.Name,
-            Email = request.Email
-        };
+            return NotFound("User not found.");
+        }
+        var emailExists = await _context.Users.AnyAsync(
+            u => u.Email == email && u.Id != userId
+        );
 
-        return Ok(user);
-    }
+        if (emailExists)
+        {
+            return Conflict("Email in use.");
+        }
 
-    [HttpDelete("{id}")]
-    public IActionResult DeleteUser(int id)
-    {
-        return NoContent();
-    }
-    
-    [Authorize]
-    [HttpGet("profile")]
-    public IActionResult GetProfile()
-    {
-        var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        user.Email = email;
 
-        var email = User.FindFirst(ClaimTypes.Email)?.Value;
+        await _context.SaveChangesAsync();
 
         return Ok(new
         {
-            Message = "You are authenticated!",
-            UserId = userId,
-            Email = email
+            Message = "Profile updated succefully",
+            user.Id,
+            user.Email
         });
+    }
+
+    [HttpDelete("profile")]
+    public async Task<IActionResult> DeleteProfile()
+    {
+        var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value
+        );
+        var user = await _context.Users.FindAsync(userId);
+        
+        if (user == null)
+        {
+            return NotFound("User not found.");
+        }
+
+        _context.Remove(user);
+        await _context.SaveChangesAsync();
+
+        return NoContent();
     }
 }

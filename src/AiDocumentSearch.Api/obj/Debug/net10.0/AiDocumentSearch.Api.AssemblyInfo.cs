@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AiDocumentSearch.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+360cce51f94529141d826ab4db92897d7b666bf1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5cfee232973fdaf115e178470845c25856784258")]
 [assembly: System.Reflection.AssemblyProductAttribute("AiDocumentSearch.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AiDocumentSearch.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

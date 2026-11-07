@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hbMo7+7MpRc=",
+  "dgSpecHash": "pZVzTdXswjo=",
   "success": true,
-  "projectFilePath": "D:\\work\\AI Document Search Platform (RAG)\\AI-document-search\\src\\AiDocumentSearch.Infrastructure\\AiDocumentSearch.Infrastructure.csproj",
+  "projectFilePath": "D:\\work\\AI Document Search Platform (RAG)\\Ai-Document-Search\\src\\AiDocumentSearch.Infrastructure\\AiDocumentSearch.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\diogo\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\diogo\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.10\\microsoft.aspnetcore.openapi.10.0.10.nupkg.sha512",
@@ -47,9 +47,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'Microsoft.OpenApi' 2.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc",
-      "projectPath": "D:\\work\\AI Document Search Platform (RAG)\\AI-document-search\\src\\AiDocumentSearch.Infrastructure\\AiDocumentSearch.Infrastructure.csproj",
+      "projectPath": "D:\\work\\AI Document Search Platform (RAG)\\Ai-Document-Search\\src\\AiDocumentSearch.Infrastructure\\AiDocumentSearch.Infrastructure.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\work\\AI Document Search Platform (RAG)\\AI-document-search\\src\\AiDocumentSearch.Infrastructure\\AiDocumentSearch.Infrastructure.csproj",
+      "filePath": "D:\\work\\AI Document Search Platform (RAG)\\Ai-Document-Search\\src\\AiDocumentSearch.Infrastructure\\AiDocumentSearch.Infrastructure.csproj",
       "libraryId": "Microsoft.OpenApi",
       "targetGraphs": [
         "net10.0"

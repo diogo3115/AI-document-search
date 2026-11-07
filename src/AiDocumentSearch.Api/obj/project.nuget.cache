@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xsqHqYesJaA=",
+  "dgSpecHash": "5pv5SenS4GY=",
   "success": true,
-  "projectFilePath": "D:\\work\\AI Document Search Platform (RAG)\\AI-document-search\\src\\AiDocumentSearch.Api\\AiDocumentSearch.Api.csproj",
+  "projectFilePath": "D:\\work\\AI Document Search Platform (RAG)\\Ai-Document-Search\\src\\AiDocumentSearch.Api\\AiDocumentSearch.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\diogo\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\diogo\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\10.0.14\\microsoft.aspnetcore.authentication.jwtbearer.10.0.14.nupkg.sha512",

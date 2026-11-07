@@ -1,7 +1,11 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace AiDocumentSearch.Application.DTOs;
 
 public class UpdateUserRequest
 {
-    public string Name {set; get;} = string.Empty;
+    [Required]
+    [EmailAddress]
+    [MaxLength(254)]
     public string Email {set; get;} = string.Empty;
 }

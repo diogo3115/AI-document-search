@@ -3063,11 +3063,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\work\\AI Document Search Platform (RAG)\\AI-document-search\\src\\AiDocumentSearch.Api\\AiDocumentSearch.Api.csproj",
+      "projectUniqueName": "D:\\work\\AI Document Search Platform (RAG)\\Ai-Document-Search\\src\\AiDocumentSearch.Api\\AiDocumentSearch.Api.csproj",
       "projectName": "AiDocumentSearch.Api",
-      "projectPath": "D:\\work\\AI Document Search Platform (RAG)\\AI-document-search\\src\\AiDocumentSearch.Api\\AiDocumentSearch.Api.csproj",
+      "projectPath": "D:\\work\\AI Document Search Platform (RAG)\\Ai-Document-Search\\src\\AiDocumentSearch.Api\\AiDocumentSearch.Api.csproj",
       "packagesPath": "C:\\Users\\diogo\\.nuget\\packages\\",
-      "outputPath": "D:\\work\\AI Document Search Platform (RAG)\\AI-document-search\\src\\AiDocumentSearch.Api\\obj\\",
+      "outputPath": "D:\\work\\AI Document Search Platform (RAG)\\Ai-Document-Search\\src\\AiDocumentSearch.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\diogo\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -3083,11 +3083,11 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "D:\\work\\AI Document Search Platform (RAG)\\AI-document-search\\src\\AiDocumentSearch.Application\\AiDocumentSearch.Application.csproj": {
-              "projectPath": "D:\\work\\AI Document Search Platform (RAG)\\AI-document-search\\src\\AiDocumentSearch.Application\\AiDocumentSearch.Application.csproj"
+            "D:\\work\\AI Document Search Platform (RAG)\\Ai-Document-Search\\src\\AiDocumentSearch.Application\\AiDocumentSearch.Application.csproj": {
+              "projectPath": "D:\\work\\AI Document Search Platform (RAG)\\Ai-Document-Search\\src\\AiDocumentSearch.Application\\AiDocumentSearch.Application.csproj"
             },
-            "D:\\work\\AI Document Search Platform (RAG)\\AI-document-search\\src\\AiDocumentSearch.Infrastructure\\AiDocumentSearch.Infrastructure.csproj": {
-              "projectPath": "D:\\work\\AI Document Search Platform (RAG)\\AI-document-search\\src\\AiDocumentSearch.Infrastructure\\AiDocumentSearch.Infrastructure.csproj"
+            "D:\\work\\AI Document Search Platform (RAG)\\Ai-Document-Search\\src\\AiDocumentSearch.Infrastructure\\AiDocumentSearch.Infrastructure.csproj": {
+              "projectPath": "D:\\work\\AI Document Search Platform (RAG)\\Ai-Document-Search\\src\\AiDocumentSearch.Infrastructure\\AiDocumentSearch.Infrastructure.csproj"
             }
           }
         }
